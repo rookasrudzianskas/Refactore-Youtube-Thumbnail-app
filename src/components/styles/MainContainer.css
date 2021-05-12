@@ -1,4 +1,7 @@
 .mainContainer {
     border: 1px solid black;
     flex: 0.8;
+    display: flex;
+    align-items: flex-start;
+    /*flex-wrap: wrap;*/
 }

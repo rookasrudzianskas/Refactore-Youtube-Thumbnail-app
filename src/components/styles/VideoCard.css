@@ -1,0 +1,19 @@
+.videoCard {
+    border: 1px solid black;
+    flex: 0.25;
+    max-height: 250px;
+}
+
+.videoCard__thumbnail {
+    width: 100%;
+}
+.videoCard__channelImageContainer {
+    height: 36px;
+    width: 36px;
+    overflow: hidden;
+}
+
+.videoCard__channelImageContainer > img {
+    width: 100%;
+    border-radius: 999px;
+}
