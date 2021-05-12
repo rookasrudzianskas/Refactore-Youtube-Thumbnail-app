@@ -1,4 +1,5 @@
 .mainContainer {
+    background-color: #f9f9f9;
     border: 1px solid black;
     flex: 0.8;
     display: flex;
