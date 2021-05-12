@@ -39,6 +39,8 @@ const VideoCard = ({ thumbnailUrl, isCustom, channelImageUrl, title, channelName
     const [open, setOpen] = useState(false);
     const [input, setInput] = useState('');
     const [imageUrl, setImageUrl] = useState('');
+    const [thumbTitle, setThumbTitle] = useState("");
+    const [titleInput, setTitleInput] = useState("");
     // console.log(input);
     const classes = useStyles();
     // getModalStyle is not a pure function, we roll the style only on the first render
@@ -48,6 +50,7 @@ const VideoCard = ({ thumbnailUrl, isCustom, channelImageUrl, title, channelName
         // save url logic here
         e.preventDefault();
         setImageUrl(input);
+        setThumbTitle(titleInput);
         setOpen(false);
         console.log(imageUrl);
     };
@@ -63,7 +66,10 @@ const VideoCard = ({ thumbnailUrl, isCustom, channelImageUrl, title, channelName
                     <form action="">
                         {/* what we type is going to be saved in the input state. but then we click*/}
                         {/* submit, we have that url to the image  state*/}
-                        <TextField value={input} onChange={e => setInput(e.target.value)}/>
+                        <TextField placeholder="image URL" value={input} onChange={e => setInput(e.target.value)}/>
+
+                        <TextField placeholder="Title" value={titleInput} onChange={e => setTitleInput(e.target.value)}/>
+
                         <Button type="submit" onClick={handleClose}>Set Image URL</Button>
                     </form>
 
@@ -86,7 +92,7 @@ const VideoCard = ({ thumbnailUrl, isCustom, channelImageUrl, title, channelName
                 </div>
 
                 <div className="videoCard__infoText">
-                    <p className="videoCard__title">{title}</p>
+                    <p className="videoCard__title">{thumbTitle || title}</p>
                     <p className="videoCard__channelName">{channelName}</p>
                     <p className="videoCard__numOfViewsAndPostDate">{numOfViews} • {postedDate}</p>
                 </div>
