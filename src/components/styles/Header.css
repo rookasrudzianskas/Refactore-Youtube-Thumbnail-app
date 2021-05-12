@@ -18,6 +18,7 @@
 
 .header__searchButton {
     background-color: lightgray !important;
+    height: 38px;
 }
 
 .header__logo {

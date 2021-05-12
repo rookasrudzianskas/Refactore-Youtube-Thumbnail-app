@@ -5,7 +5,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import AppsIcon from '@material-ui/icons/Apps';
+import VideoCallIcon from '@material-ui/icons/VideoCall';
 
 const Header = () => {
     return (
@@ -23,7 +25,9 @@ const Header = () => {
             </div>
         {/*    Search box   */}
             <div className="header__rightLogos">
-                <h1>Right side</h1>
+                <VideoCallIcon />
+                <AppsIcon />
+                <NotificationsIcon />
             </div>
         {/*    Right side logo  */}
         </div>

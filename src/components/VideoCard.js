@@ -1,9 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./styles/VideoCard.css";
+import TextField from "@material-ui/core/TextField";
+import Modal from "@material-ui/core/Modal";
 
-const VideoCard = ({ thumbnailUrl, channelImageUrl, title, channelName, numOfViews, postedDate }) => {
+
+const VideoCard = ({ thumbnailUrl, isCustom, channelImageUrl, title, channelName, numOfViews, postedDate }) => {
+
+    const [open, setOpen] = useState(false);
+
+    const handleClose = () => {
+        // save url logic here
+        setOpen(false);
+    }
+
+
     return (
         <div className="videoCard">
+            <Modal
+                open={open} onClose={handleClose}>
+                <TextField />
+            </Modal>
+            {isCustom ? (
+                <button onClick={e => setOpen(true)}>Upload thumbnail</button>
+            ) : (
+                <img  className="videoCard" src=""/>
+            )}
             <img className="videoCard__thumbnail" src={thumbnailUrl} alt=""/>
 
             <div className="videoCard__info">
