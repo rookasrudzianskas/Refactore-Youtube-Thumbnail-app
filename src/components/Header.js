@@ -1,19 +1,25 @@
 import React from 'react';
 import "./styles/Header.css";
 import SearchIcon from '@material-ui/icons/Search';
+import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
 
 const Header = () => {
     return (
         <div className="header">
-            <div className="header__logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1024px-YouTube_Logo_2017.svg.png" alt=""/>
+            <div className="header__leftSide">
+               <MenuIcon />
+                <img className="header__logo" src="https://logos-world.net/wp-content/uploads/2020/04/YouTube-Logo.png" alt=""/>
             </div>
         {/*    Youtube logo*/}
             <div className="header__search">
-                <input type="text"/>
-                <button>
+                <TextField className="header__input" placeholder="Search" variant="outlined" type="text"/>
+                <Button className="header__searchButton">
                     <SearchIcon />
-                </button>
+                </Button>
             </div>
         {/*    Search box   */}
             <div className="header__rightLogos">
