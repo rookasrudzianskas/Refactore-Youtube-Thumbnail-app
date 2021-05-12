@@ -1,7 +1,10 @@
 .videoCard {
-    border: 1px solid black;
     flex: 0.25;
+    min-width: 22%;
     max-height: 250px;
+    margin-right: 20px;
+    /*align-content: flex-start;*/
+    /*flex-shrink: 0;*/
 }
 .videoCard__info {
     display: flex;
@@ -36,10 +39,10 @@
     height: 36px;
     width: 36px;
     overflow: hidden;
-    border-radius: 999px;
+    border-radius: 50%;
 }
 
 .videoCard__channelImageContainer > img {
     width: 100%;
-    border-radius: 999px;
+    border-radius: 50%;
 }
