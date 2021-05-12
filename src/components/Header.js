@@ -4,11 +4,18 @@ import "./styles/Header.css";
 const Header = () => {
     return (
         <div className="header">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1024px-YouTube_Logo_2017.svg.png" alt=""/>
+            <div className="header__logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1024px-YouTube_Logo_2017.svg.png" alt=""/>
+            </div>
         {/*    Youtube logo*/}
-           <h1>Search Box</h1>
+            <div className="header__search">
+                <input type="text"/>
+                <button>Icon</button>
+            </div>
         {/*    Search box   */}
-            <h1>Right side</h1>
+            <div className="header__rightLogos">
+                <h1>Right side</h1>
+            </div>
         {/*    Right side logo  */}
         </div>
     );

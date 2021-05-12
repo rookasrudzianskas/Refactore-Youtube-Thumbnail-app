@@ -2,3 +2,13 @@
     display: flex;
     justify-content: space-between;
 }
+
+.header__logo > img {
+    height: 100px;
+    object-fit: contain;
+}
+
+.header__search {
+    flex: 1;
+    border: 1px solid black;
+}
