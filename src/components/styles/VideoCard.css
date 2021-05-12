@@ -5,15 +5,28 @@
 }
 .videoCard__info {
     display: flex;
+    margin-top: 12px;
 }
 
-.videoCard__infoTitle {
-    font-size: 1.4rem;
+.videoCard__title {
+    font-size: 14px;
     font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.videoCard__numOfViewsAndPostDate {
+    color: #606060;
+    font-size: 14px;
+}
+
+.videoCard__channelName {
+    font-size: 14px;
+    color: #606060;
 }
 
 .videoCard__infoText {
     flex: 1;
+    margin-left: 12px;
 }
 
 .videoCard__thumbnail {

@@ -12,10 +12,9 @@ const VideoCard = ({ thumbnailUrl, channelImageUrl, title, channelName, numOfVie
                 </div>
 
                 <div className="videoCard__infoText">
-                    <p className="videoCard__infoTitle">{title}</p>
+                    <p className="videoCard__title">{title}</p>
                     <p className="videoCard__channelName">{channelName}</p>
-                    <p className="videoCard__numOfViews">{numOfViews}</p>
-                    <p className="videoCard__postedDate">{postedDate}</p>
+                    <p className="videoCard__numOfViewsAndPostDate">{numOfViews} • {postedDate}</p>
                 </div>
             </div>
         </div>
