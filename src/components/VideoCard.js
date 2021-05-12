@@ -49,6 +49,7 @@ const VideoCard = ({ thumbnailUrl, isCustom, channelImageUrl, title, channelName
     return (
         <div className="videoCard">
 
+            {/* MODAL +++++++++++++++=*/}
             <Modal
                 open={open} onClose={handleClose}>
                 <div style={modalStyle} className={classes.paper}>
@@ -56,11 +57,14 @@ const VideoCard = ({ thumbnailUrl, isCustom, channelImageUrl, title, channelName
                 </div>
             </Modal>
 
+            {/* Defining if car is custom or not*/}
             {isCustom ? (
                 <button onClick={e => setOpen(true)}>Upload thumbnail</button>
             ) : (
-                <img  className="videoCard" src=""/>
+                <img  className="videoCard__thumbnail" src=""/>
             )}
+
+
             <img className="videoCard__thumbnail" src={thumbnailUrl} alt=""/>
 
             <div className="videoCard__info">
