@@ -5,6 +5,8 @@ import VideoCard from "./VideoCard";
 const MainContainer = () => {
     return (
         <div className="mainContainer">
+            <h2 className="mainContainer__title">Recommended</h2>
+        <div className="mainContainer__videos">
             <VideoCard
                         channelImageUrl="https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK_400x400.jpg"
                        postedDate="3 days ago"
@@ -44,6 +46,7 @@ const MainContainer = () => {
                 title="Something cool is coming up?! 🚀"
                 thumbnailUrl="https://d34tp322e0pcja.cloudfront.net/wp-content/uploads/2019/08/20210015/colors-stand-out.jpg"/>
 
+        </div>
         </div>
     );
 };
